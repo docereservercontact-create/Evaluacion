@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Examen de Tema 1 La comunicación - U1T1  </title>
+<title>Unidad 1 Tema 1  </title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <style>
@@ -43,9 +43,9 @@ button {
 <body>
 
 <div id="inicio">
-    <h2>Examen de Tema 1 La comunicación - U1T1  </h2>
+    <h2>Examen de Tema 1 - Estructura celular  </h2>
     <input id="nombre" placeholder="Usuario">
-    <input id="cuenta" placeholder="ContraseÃ±a">
+    <input id="cuenta" placeholder="ContraseÃƒÂ±a">
     <button onclick="iniciarExamen()">Iniciar</button>
 </div>
 
@@ -59,7 +59,7 @@ button {
 <div id="resultados"></div>
 
 <script>
-// ğŸ” ALUMNOS (SIN CAMBIOS)
+// Ã°Å¸â€Â ALUMNOS (SIN CAMBIOS)
 const alumnos = [
     {nombre:"mmariazas10@gmail.com", cuenta:"Reg2026"},
     {nombre:"danteramirezcabrera20@gmail.com", cuenta:"Reg2026"},
@@ -79,26 +79,26 @@ const TOTAL_PREGUNTAS = 40;
 
 // ?? PREGUNTAS
 const preguntas = [
-    {enunciado:"¿Qué función de la lengua se centra en el contexto?", opciones:["Emotiva","Referencial","Poética","Fática"]},
-    {enunciado:"¿Qué función busca influir en el receptor?", opciones:["Referencial","Metalingüística","Apelativa","Poética"]},
-    {enunciado:"¿Qué función se enfoca en el emisor?", opciones:["Emotiva","Fática","Referencial","Poética"]},
-    {enunciado:"¿Qué función se centra en el mensaje?", opciones:["Apelativa","Poética","Fática","Emotiva"]},
-    {enunciado:"¿Qué función verifica que el canal funciona?", opciones:["Metalingüística","Fática","Referencial","Apelativa"]},
-    {enunciado:"¿Qué función explica el lenguaje?", opciones:["Emotiva","Referencial","Metalingüística","Poética"]},
-    {enunciado:"\"El agua hierve a 100°C\" es un ejemplo de función:", opciones:["Emotiva","Referencial","Poética","Apelativa"]},
-    {enunciado:"\"Cierra la ventana\" corresponde a la función:", opciones:["Emotiva","Referencial","Apelativa","Poética"]},
-    {enunciado:"\"Estoy muy feliz hoy\" es función:", opciones:["Fática","Poética","Emotiva","Referencial"]},
-    {enunciado:"\"Tus labios son pétalos de rosa\" es función:", opciones:["Referencial","Poética","Metalingüística","Fática"]},
-    {enunciado:"\"¿Me escuchas?\" es función:", opciones:["Apelativa","Emotiva","Fática","Referencial"]},
-    {enunciado:"\"'Casa' es un sustantivo\" es función:", opciones:["Referencial","Metalingüística","Emotiva","Poética"]},
-    {enunciado:"¿Qué función usa lenguaje figurado?", opciones:["Referencial","Poética","Fática","Apelativa"]},
-    {enunciado:"¿Qué función suele usar imperativos?", opciones:["Emotiva","Referencial","Apelativa","Poética"]},
-    {enunciado:"¿Qué función expresa sentimientos?", opciones:["Fática","Emotiva","Referencial","Metalingüística"]},
-    {enunciado:"¿Qué función predomina en textos científicos?", opciones:["Poética","Emotiva","Referencial","Fática"]},
-    {enunciado:"¿Qué función predomina en la publicidad?", opciones:["Referencial","Metalingüística","Apelativa","Emotiva"]},
-    {enunciado:"¿Qué elemento corresponde a la función metalingüística?", opciones:["Canal","Código","Emisor","Contexto"]},
-    {enunciado:"En \"¡Ven ahora mismo!\", predomina la función:", opciones:["Emotiva","Referencial","Apelativa","Fática"]},
-    {enunciado:"¿Qué característica tiene la función fática?", opciones:["Explica reglas del lenguaje","Embellece el mensaje","Mantiene la comunicación","Expresa emociones"]}
+    {enunciado:"Â¿QuÃ© funciÃ³n de la lengua se centra en el contexto?", opciones:["Emotiva","Referencial","PoÃ©tica","FÃ¡tica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n busca influir en el receptor?", opciones:["Referencial","MetalingÃ¼Ã­stica","Apelativa","PoÃ©tica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n se enfoca en el emisor?", opciones:["Emotiva","FÃ¡tica","Referencial","PoÃ©tica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n se centra en el mensaje?", opciones:["Apelativa","PoÃ©tica","FÃ¡tica","Emotiva"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n verifica que el canal funciona?", opciones:["MetalingÃ¼Ã­stica","FÃ¡tica","Referencial","Apelativa"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n explica el lenguaje?", opciones:["Emotiva","Referencial","MetalingÃ¼Ã­stica","PoÃ©tica"]},
+    {enunciado:"\"El agua hierve a 100Â°C\" es un ejemplo de funciÃ³n:", opciones:["Emotiva","Referencial","PoÃ©tica","Apelativa"]},
+    {enunciado:"\"Cierra la ventana\" corresponde a la funciÃ³n:", opciones:["Emotiva","Referencial","Apelativa","PoÃ©tica"]},
+    {enunciado:"\"Estoy muy feliz hoy\" es funciÃ³n:", opciones:["FÃ¡tica","PoÃ©tica","Emotiva","Referencial"]},
+    {enunciado:"\"Tus labios son pÃ©talos de rosa\" es funciÃ³n:", opciones:["Referencial","PoÃ©tica","MetalingÃ¼Ã­stica","FÃ¡tica"]},
+    {enunciado:"\"Â¿Me escuchas?\" es funciÃ³n:", opciones:["Apelativa","Emotiva","FÃ¡tica","Referencial"]},
+    {enunciado:"\"'Casa' es un sustantivo\" es funciÃ³n:", opciones:["Referencial","MetalingÃ¼Ã­stica","Emotiva","PoÃ©tica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n usa lenguaje figurado?", opciones:["Referencial","PoÃ©tica","FÃ¡tica","Apelativa"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n suele usar imperativos?", opciones:["Emotiva","Referencial","Apelativa","PoÃ©tica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n expresa sentimientos?", opciones:["FÃ¡tica","Emotiva","Referencial","MetalingÃ¼Ã­stica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n predomina en textos cientÃ­ficos?", opciones:["PoÃ©tica","Emotiva","Referencial","FÃ¡tica"]},
+    {enunciado:"Â¿QuÃ© funciÃ³n predomina en la publicidad?", opciones:["Referencial","MetalingÃ¼Ã­stica","Apelativa","Emotiva"]},
+    {enunciado:"Â¿QuÃ© elemento corresponde a la funciÃ³n metalingÃ¼Ã­stica?", opciones:["Canal","CÃ³digo","Emisor","Contexto"]},
+    {enunciado:"En \"Â¡Ven ahora mismo!\", predomina la funciÃ³n:", opciones:["Emotiva","Referencial","Apelativa","FÃ¡tica"]},
+    {enunciado:"Â¿QuÃ© caracterÃ­stica tiene la funciÃ³n fÃ¡tica?", opciones:["Explica reglas del lenguaje","Embellece el mensaje","Mantiene la comunicaciÃ³n","Expresa emociones"]}
 ];
 
 // ? RESPUESTAS
@@ -135,7 +135,7 @@ function iniciarExamen() {
         return;
     }
 
-    alert("Reglas:\n- No cambiar de pestaÃ±a\n- No copiar/pegar\n- Tiempo limitado");
+    alert("Reglas:\n- No cambiar de pestaÃƒÂ±a\n- No copiar/pegar\n- Tiempo limitado");
 
     document.getElementById("inicio").style.display = "none";
     document.getElementById("examen").style.display = "block";
@@ -223,7 +223,7 @@ function activarSeguridad() {
 function terminarExamen(trampa=false) {
 
     if (!trampa) {
-        if (!confirm("Â¿Seguro que deseas enviar?")) return;
+        if (!confirm("Ã‚Â¿Seguro que deseas enviar?")) return;
     }
 
     clearInterval(intervalo);
