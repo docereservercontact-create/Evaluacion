@@ -1,10 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Hola Mundo</title>
+<meta charset="UTF-8">
+<title>Español</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    width: 120px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* Efecto hover del logo */
+.logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+.subtitulo {
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    color: #2c3e50;
+    padding: 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+</style>
+
 </head>
+
 <body>
-    <h1>Hola Mundo 🌎</h1>
+
+<!-- LOGO -->
+<img src="Logo.png" class="logo">
+
+<h1>Español | Evaluaciones </h1>
+<p class="subtitulo">Selecciona un examen</p>
+
+<div class="grid">
+
+    <div class="card" onclick="abrir('Examen de Unidad 1 - U1 - Lengua y comunicacion.html')">Examen de Unidad 1 - U1 - Lengua y comunicacion.html</div>
+    <div class="card" onclick="abrir('Examen de Tema 2 La comunicacion - U1T2.html')">Examen de Tema 2 La comunicacion - U1T2.html</div>
+    <div class="card" onclick="abrir('Examen de Tema 1 La comunicacion - U1T1.html')">Examen de Tema 1 La comunicacion - U1T1.html</div>
+
+</div>
+
+<script>
+function abrir(ruta) {
+    window.location.href = ruta;
+}
+</script>
+
 </body>
 </html>
